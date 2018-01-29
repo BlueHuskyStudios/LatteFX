@@ -2,31 +2,14 @@
 
 package LatteFX
 
-import com.sun.org.apache.xpath.internal.operations.Bool
 import javafx.application.Platform
-import javafx.scene.Group
-import javafx.scene.Parent
-import javafx.scene.Scene
-import javafx.stage.Stage
 import java.lang.reflect.Constructor
 import kotlin.reflect.KClass
 
-/**
+/*
  * @author Ben Leggiero
  * @since 2017-10-01
  */
-
-/**
- * A JavaFX window
- * @see Stage
- */
-public typealias LatteWindow = Stage
-
-/**
- * A JavaFX window
- * @see Stage
- */
-public typealias FXWindow = Stage
 
 
 
