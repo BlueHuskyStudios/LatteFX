@@ -1,8 +1,7 @@
 package LatteFX
 
 import LatteFX.LatteGroup.Companion.main
-import javafx.application.Application
-import javafx.scene.*
+import javafx.application.*
 import javafx.scene.control.*
 
 /**
@@ -38,6 +37,7 @@ abstract class LatteFXMain(
                 }
             }
         }
+        
         onStart(super.getParameters().raw.toTypedArray(), primaryWindow)
     }
 }

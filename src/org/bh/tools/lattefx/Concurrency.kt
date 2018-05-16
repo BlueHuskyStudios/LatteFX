@@ -1,8 +1,8 @@
-@file:Suppress("unused")
+@file:Suppress("unused", "PackageDirectoryMismatch")
 
 package LatteFX
 
-import javafx.application.Platform
+import javafx.application.*
 
 /**
  * @author Ben Leggiero

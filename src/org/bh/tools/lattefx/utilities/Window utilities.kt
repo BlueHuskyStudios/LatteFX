@@ -1,10 +1,11 @@
 @file:JvmName("LatteWindowUtils")
+@file:Suppress("PackageDirectoryMismatch")
 
 package LatteFX
 
-import javafx.application.Platform
-import java.lang.reflect.Constructor
-import kotlin.reflect.KClass
+import javafx.application.*
+import java.lang.reflect.*
+import kotlin.reflect.*
 
 /*
  * @author Ben Leggiero
@@ -13,10 +14,10 @@ import kotlin.reflect.KClass
 
 
 
-public fun <WindowType: LatteWindow> show(windowClass: KClass<WindowType>, wait: Boolean = false): WindowType {
+fun <WindowType: LatteWindow> show(windowClass: KClass<WindowType>, wait: Boolean = false): WindowType {
     return show(windowClass = windowClass.java, wait = wait)
 }
-public fun <WindowType: LatteWindow> show(windowClass: Class<WindowType>, wait: Boolean = false): WindowType {
+fun <WindowType: LatteWindow> show(windowClass: Class<WindowType>, wait: Boolean = false): WindowType {
     val constructors: Array<out Constructor<WindowType>>
 
     try {

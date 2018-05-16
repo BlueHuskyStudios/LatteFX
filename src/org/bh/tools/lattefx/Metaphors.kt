@@ -1,31 +1,8 @@
 package LatteFX
 
-import javafx.application.Application
-import javafx.scene.Node
-import javafx.scene.Scene
-import javafx.scene.layout.Pane
-import javafx.scene.layout.Region
-import javafx.stage.Stage
-
-/**
- * The main class/method of a LatteFX application
- *
- * Usage:
- * ```
- *  class Main : LatteFXMain({ commandLineArguments, primaryWindow ->
- *      primaryWindow!!.contentWrapper = MyContentWrapper()
- *      primaryWindow.show()
- *  })
- * ```
- *
- * @author Ben Leggiero
- * @since 2017-10-02
- */
-abstract class LatteFXMain(private val onStart: (commandLineArguments: Array<String>, primaryWindow: Stage?) -> Unit) : Application() {
-    override fun start(primaryWindow: LatteWindow?) {
-        onStart(super.getParameters().raw.toTypedArray(), primaryWindow)
-    }
-}
+import javafx.scene.*
+import javafx.scene.layout.*
+import javafx.stage.*
 
 
 /**
