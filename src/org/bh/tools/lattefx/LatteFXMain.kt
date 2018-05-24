@@ -1,3 +1,4 @@
+@file:Suppress("PackageDirectoryMismatch")
 package LatteFX
 
 import LatteFX.LatteGroup.Companion.main
