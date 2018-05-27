@@ -21,7 +21,7 @@ import javafx.scene.control.*
 abstract class LatteFXMain(
         val appInfo: LatteAppInfo? = null,
         val appConfig: LatteAppConfig? = null,
-        private val onStart: (commandLineArguments: Array<String>, LatteWindow?) -> Unit
+        private val onStart: (commandLineArguments: Parameters, LatteWindow?) -> Unit
 ) : Application() {
     override fun start(primaryWindow: LatteWindow?) {
         if (null != appInfo) {
@@ -40,7 +40,7 @@ abstract class LatteFXMain(
             }
         }
         
-        onStart(super.getParameters().raw.toTypedArray(), primaryWindow)
+        onStart(super.getParameters(), primaryWindow)
     }
 }
 
