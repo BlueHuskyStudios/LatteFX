@@ -1,8 +1,6 @@
 @file:Suppress("PackageDirectoryMismatch")
 package LatteFX
 
-import javafx.scene.*
-
 /**
  * @author Ben Leggiero
  * @since 2018-05-13
@@ -13,6 +11,6 @@ interface LatteAppInfo {
 
 interface LatteAppConfig {
     val automaticallySetUpSystemMenuBar: Boolean
-    val primaryGroup: Group?
+    val primaryParent: PaneOrGroup<*>?
     val startingWrapperGenerator: (() -> LatteComponentWrapper)?
 }

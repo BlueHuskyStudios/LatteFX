@@ -1,7 +1,8 @@
 @file:Suppress("PackageDirectoryMismatch")
 package LatteFX
 
-import LatteFX.LatteGroup.Companion.main
+import LatteFX.LatteGroup.Companion.mainGroup
+import LatteFX.PaneOrGroup.*
 import javafx.application.*
 import javafx.scene.control.*
 
@@ -26,7 +27,7 @@ abstract class LatteFXMain(
         if (null != appInfo) {
             if (null != appConfig) {
                 if (appConfig.automaticallySetUpSystemMenuBar) {
-                    val group = appConfig.primaryGroup ?: main
+                    val group = appConfig.primaryParent ?: group(mainGroup)
                     group.children.add(SystemMenuBar(appInfo))
                 }
 
@@ -48,9 +49,7 @@ abstract class LatteFXMain(
 private class SystemMenuBar(val appInfo: LatteAppInfo): MenuBar() {
     init {
         this.useSystemMenuBar = true
-
         val appMenu = Menu(appInfo.appName)
-
         this.menus += appMenu
     }
 }
