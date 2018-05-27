@@ -1,15 +1,8 @@
 package LatteFX
 
-import javafx.scene.Node
-import javafx.scene.Parent
-import javafx.scene.Scene
-import javafx.scene.layout.Pane
-import javafx.scene.layout.Region
-
-/**
- * @author Ben Leggiero
- * @since 2017-10-02
- */
+import javafx.scene.*
+import javafx.scene.layout.*
+import javafx.stage.*
 
 
 /**
@@ -27,6 +20,12 @@ typealias FXPanel = Pane
 
 
 /**
+ * That which wraps itself around all [LatteViewBase]s in a hierarchy
+ * @see Scene
+ */
+typealias LatteWindowContentView = Scene
+
+/**
  * That which wraps itself around all [LatteComponent]s in a hierarchy
  * @see Scene
  */
@@ -41,6 +40,11 @@ typealias FXComponentWrapper = Scene
 
 
 /**
+ * The base class of all JavaFX views in a hierarchy
+ */
+typealias LatteViewBase = Node
+
+/**
  * The base class of all JavaFX components in a hierarchy
  */
 typealias LatteComponent = Node
@@ -53,6 +57,16 @@ typealias FXComponent = Node
 
 
 /**
+ * The most basic JavaFX view that can contain another component (Branch node)
+ */
+typealias LatteView = Region
+
+/**
+ * The most basic JavaFX view that can contain another component (Branch node)
+ */
+typealias FXView = Region
+
+/**
  * The most basic JavaFX component that can contain another component (Branch node)
  */
 typealias LatteContainer = Region
@@ -63,18 +77,28 @@ typealias LatteContainer = Region
 typealias FXContainer = Region
 
 
+
+/**
+ * A JavaFX window
+ * @see Stage
+ */
+public typealias LatteWindow = Stage
+
+/**
+ * A JavaFX window
+ * @see Stage
+ */
+public typealias FXWindow = Stage
+
+
+
 /**
  * The wrapper around the content of this window
  */
-var LatteWindow.contentWrapper: LatteComponentWrapper?
+var LatteWindow.contentWrapper: LatteWindowContentView?
     get() {
         return this.scene
     }
     set(newScene) {
         this.scene = newScene
     }
-
-
-//fun LatteContainer.add(child: LatteComponent) {
-//    this.getChildren().add(child)
-//}

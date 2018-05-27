@@ -1,39 +1,23 @@
 @file:JvmName("LatteWindowUtils")
+@file:Suppress("PackageDirectoryMismatch")
 
 package LatteFX
 
-import com.sun.org.apache.xpath.internal.operations.Bool
-import javafx.application.Platform
-import javafx.scene.Group
-import javafx.scene.Parent
-import javafx.scene.Scene
-import javafx.stage.Stage
-import java.lang.reflect.Constructor
-import kotlin.reflect.KClass
+import javafx.application.*
+import java.lang.reflect.*
+import kotlin.reflect.*
 
-/**
+/*
  * @author Ben Leggiero
  * @since 2017-10-01
  */
 
-/**
- * A JavaFX window
- * @see Stage
- */
-public typealias LatteWindow = Stage
-
-/**
- * A JavaFX window
- * @see Stage
- */
-public typealias FXWindow = Stage
 
 
-
-public fun <WindowType: LatteWindow> show(windowClass: KClass<WindowType>, wait: Boolean = false): WindowType {
+fun <WindowType: LatteWindow> show(windowClass: KClass<WindowType>, wait: Boolean = false): WindowType {
     return show(windowClass = windowClass.java, wait = wait)
 }
-public fun <WindowType: LatteWindow> show(windowClass: Class<WindowType>, wait: Boolean = false): WindowType {
+fun <WindowType: LatteWindow> show(windowClass: Class<WindowType>, wait: Boolean = false): WindowType {
     val constructors: Array<out Constructor<WindowType>>
 
     try {
