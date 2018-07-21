@@ -11,6 +11,7 @@ interface LatteAppInfo {
 
 interface LatteAppConfig {
     val automaticallySetUpSystemMenuBar: Boolean
+    val automaticallyGeneratePrimaryWindow: Boolean get() = true
     val primaryParent: PaneOrGroup<*>?
     val startingWrapperGenerator: (() -> LatteComponentWrapper)?
 }
