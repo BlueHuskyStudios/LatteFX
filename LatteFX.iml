@@ -18,7 +18,8 @@
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="module" module-name="Blue Base Core" />
     <orderEntry type="module" module-name="Blue Base JVM" />
-    <orderEntry type="module" module-name="Husky-UI-Core_main" />
-    <orderEntry type="module" module-name="Husky-UI-JVM_main" />
+    <orderEntry type="module" module-name="Husky UI Core" />
+    <orderEntry type="module" module-name="Husky IO" />
+    <orderEntry type="module" module-name="Husky UI JVM" />
   </component>
 </module>
