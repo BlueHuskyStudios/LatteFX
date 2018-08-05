@@ -19,7 +19,6 @@
     <orderEntry type="module" module-name="Blue Base Core" />
     <orderEntry type="module" module-name="Blue Base JVM" />
     <orderEntry type="module" module-name="Husky UI Core" />
-    <orderEntry type="module" module-name="Husky-IO" />
     <orderEntry type="module" module-name="Husky UI JVM" />
   </component>
 </module>
